@@ -344,7 +344,137 @@ public class file6 {
 ```
 
 
+Source code yg berisi perintah mengubah tulisan text di Jlabel menggunakan variabel, yg isi variabelnya di dapat dari apa yg diisikan di JTextField. Perintah dijalankan melalui JTextField:
 
+
+```java
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.steven.latihan2;
+
+/**
+ *
+ * @author owner
+ */
+
+import java.awt.*;
+
+import java.awt.event.*;
+
+import java.awt.Font;
+
+import javax.swing.*;
+
+
+
+public class file7 {
+    
+    public static void membuatWindow(){
+    
+        JFrame bingkai1 = new JFrame("Tombol Dengan Perintah");
+        
+        bingkai1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        JLabel lbKodeEmiten, lbNamaEmiten, lbTampilNamaEmiten;
+        
+        JTextField txtKodeEmiten, txtNamaEmiten;
+        
+        JButton tbTampilkanInputan;
+        
+        JButton tbUbahNamaEmiten;
+        
+        
+        lbKodeEmiten = new JLabel("Kode Emiten : ");
+        
+        lbNamaEmiten = new JLabel("Nama Emiten : ");
+        
+        lbTampilNamaEmiten = new JLabel("Gojek Tokopedia");
+        
+        txtKodeEmiten = new JTextField();
+        
+        txtNamaEmiten = new JTextField();
+        
+        lbNamaEmiten = new JLabel("Nama Emiten : ");
+        
+        tbUbahNamaEmiten = new JButton("Ubah Nama Emiten");
+        
+        txtNamaEmiten.setFont(new Font("Arial", Font.BOLD, 20));
+        
+        lbNamaEmiten.setFont(new Font("Arial", Font.BOLD, 20));
+    
+        lbTampilNamaEmiten.setFont(new Font("Arial", Font.BOLD, 20));
+        
+        tbUbahNamaEmiten.setFont(new Font("Arial", Font.BOLD, 20));
+        
+        txtKodeEmiten.setFont(new Font("Arial", Font.BOLD, 20));
+        
+        lbNamaEmiten.setBounds(10, 10, 150, 30);
+        
+        txtNamaEmiten.setBounds(160, 10, 350, 30);
+        
+        tbUbahNamaEmiten.setBounds(10,50,250,30);
+        
+        lbTampilNamaEmiten.setBounds(10, 100, 250, 30);
+        
+        
+        // Mengisi tombol dengan perintah mengubah text di JLabel
+        
+        tbUbahNamaEmiten.addActionListener(new ActionListener(){
+        
+            public void actionPerformed(ActionEvent e){
+            
+                String isiNamaEmiten = txtNamaEmiten.getText();
+                
+                lbTampilNamaEmiten.setText(isiNamaEmiten);
+            
+            
+            }
+            
+            
+        });
+        
+        
+        
+        
+        bingkai1.add(lbNamaEmiten);
+        
+        bingkai1.add(txtNamaEmiten);
+        
+        bingkai1.add(tbUbahNamaEmiten);
+        
+        bingkai1.add(lbTampilNamaEmiten);
+        
+        bingkai1.setSize(550,700);
+        
+        bingkai1.setLayout(null);
+        
+        lbNamaEmiten.setForeground(new java.awt.Color(0,255,0));
+        
+        lbTampilNamaEmiten.setForeground(new java.awt.Color(0,255,0));
+        
+        bingkai1.getContentPane().setBackground(new java.awt.Color(0,0,0));
+        
+        bingkai1.setVisible(true);
+        
+    }
+    
+    
+    public static void main(String[]args){
+    
+        membuatWindow();
+    
+    }
+    
+}
+
+
+
+
+
+```
 
 
 
